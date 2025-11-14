@@ -1,7 +1,4 @@
-# Copyright (c) 2025
-#           (adapted to align with MULTIBAY_RESHUFFLECONST_ASTAR structure)
-#
-# MIT License (same as your original)
+
 
 import os
 import time
