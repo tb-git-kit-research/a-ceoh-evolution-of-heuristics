@@ -2,20 +2,20 @@
 
 This repository contains the codebase for the paper "Algorithmic Prompt-Augmentation for Efficient LLM-Based Heuristic Design for A* Search".
 
-It implements and evaluates two prompt-augmented frameworks — Contextual Evolution of Heuristics (CEoH) and Literature-Based CEoH (LitCEoH) — for automatically generating constructive heuristics using large language models (LLMs). The focus is on the Unit-load Pre-marshalling Problem (UPMP), a complex, niche combinatorial optimization task in warehouse logistics.
 
 The repository includes:
 - Full source code for heuristic evolution experiments
 - Prompt templates and configuration files
 - Benchmarking instances 
+- Heuristics code for the best performing heuristics.
 
 Please refer to the paper for methodological details.
 
-This work builds on the **Evolution of Heuristics ([EoH](https://arxiv.org/abs/2401.02051))** framework, an evolutionary method that leverages large language models (LLMs) to generate heuristics for combinatorial optimization problems.
+This work builds on the **Evolution of Heuristics ([EoH](https://arxiv.org/abs/2401.02051))** framework, an evolutionary method that leverages large language models (LLMs) to generate heuristics for combinatorial optimization problems and on the code repository of the prompt-augmentation study **Problem - Contextual Evolution of Heuristics ([P-CEoH](https://zenodo.org/records/15609821))** .
 
 The main contributions of this project are:
 - **Algorithmic - Contextual Evolution of Heuristics (A-CEoH)**: 
-A-CEoH extends the EoH prompt strategies with algorithmic insights to boot the performance of the generated heuristics.
+A-CEoH extends the EoH prompt with algorithmic insights to boost the performance of the generated heuristics.
 - **New Application Domain:** 
 Demonstrates the potential of LLM-based automated heuristic design to evolve A* guiding heuristics for both a niche optimization problem (UPMP) and a well-studied optimization problem (SPP).
 - **Performance Boost for Small Models:**
@@ -26,6 +26,17 @@ Demonstrates that the LLM-generated heuristics surpass established hand-crafted 
 <p float="center">
   <img src="docs/figures/prompt_agumentations_algo.drawio.png"  width="100%" />
 </p>
+
+*Figure: The EoH framework (grey and blue) evolves code and thoughts. The
+prompt augmentation components additional problem description (red) and
+algorithmic context (green) aim to support the evolutionary procedure.*
+
+## **Interactive population plot** 
+
+To see how the heuristics evolve in an evolutionary process, we recommend to see our exemplary
+[interactive HTML population plot](docs/html/interactive_result_plot.html) (must be downloaded to view).
+Zoom in to see how the heuristic population changes over time.
+
 
 ## **Running the Project**  
 
